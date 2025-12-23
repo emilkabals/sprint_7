@@ -19,7 +19,7 @@ class TestCreateCourier:
             response = CourierMethods.create_courier(courier_data)
 
         with allure.step('Проверить, что статус-код 201 и возвращается {"ok": true}'):
-            assert response.status_code == 20
+            assert response.status_code == 201
             assert response.json() == {'ok': True}
 
         delete_courier.append((login, password))
